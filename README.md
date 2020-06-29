@@ -1,6 +1,6 @@
 # Visual Studio Code
 
-- If you start Visual Studio Code in a folder, that folder becomes your workspace.
+When you start Visual Studio Code in a folder, that folder becomes your workspace. You can have workspace-specific settings that override your user settings. However, if you only use Visual Studio Code to edit a file, then only your user settings are in effect.
 
 ## Features
 
@@ -35,6 +35,8 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 
 To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examples:
 
+- Git: Stash
+- Git: Commit
 - File: New File
 - File: New Folder
 - View: Toggle Minimap
@@ -56,12 +58,6 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 ## Languages
 
-### C
-
-### C++
-
-### Rust
-
 ### Python
 
 - IntelliSense works for standard modules as well as ones you've installed into the environment of the selected Python interpreter; just make sure that you've selected the correct Python interepreter for your workspace.
@@ -77,5 +73,8 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 - A **formatter** is a program that only changes how your program looks.
     - The default linter for Python in Visual Studio Code is Autopep8, but you can choose other linters like Black or Yapf.
 
-## Miscellaneous
+### C
 
+### C++
+
+### Rust
