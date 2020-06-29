@@ -65,6 +65,9 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
     - Python: Select Interpreter
     - Python: Start REPL
     - Python: Run Python File in Terminal
+    - Python: Select Linter
+    - Python: Format Document
+    - Python: Configure Tests
     - Python: Run All Tests
     - Python Refactor: Sort Imports
 - A **linter** is a program that detects both stylistic as well as syntactic errors.
