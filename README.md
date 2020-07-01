@@ -52,9 +52,14 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 - Visual Studio Code uses JSON for all configuration purposes.
 - There are two main categories of settings: User and Workspace.
-- User the keyboard shortcut ⌘, to access both User and Workspace settings.
+- Use the keyboard shortcut ⌘, to access both User and Workspace settings.
 - Workplace settings are stored in the file `.vscode/settings.json`.
 - Debug settings are stored in the file `.vscode/launch.json`.
+
+## Navigation
+
+- Go to Definition (⌥F): Jump to the definition of a symbol.
+- Go to Declaration:
 
 ## Languages
 
@@ -72,6 +77,31 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
     - By default, linting is enabled (the `python.linting.enabled` setting is `true`), linting is triggered on saving a file (the `python.lintOnSave` setting is `true`), and the maximum number of linting messages is 100 (the `python.linting.maxNumberOfProblems` setting is `100`).
 - A **formatter** is a program that only changes how your program looks.
     - The default linter for Python in Visual Studio Code is Autopep8, but you can choose other linters like Black or Yapf.
+
+#### Testing
+
+The Python extension allows you to both run tests written with the `unittest`, `pytest`, or `nose` quickly and examine the results of those tests in an intuitive manner. You simply need to run the "Python: Configure Tests" command, select the testing framework you used to write your tests, the directory that contains your tests, and the regular expression used to determine which files contain tests. In terms of personal conventions, I use the `unittest` framework, put tests in the `tests/` folder, and give files containing tests names that match the `test_*` regular expression. Here are some notes about writing tests using the `unittest` framework:
+
+- The fundamental unit of abstraction is the **test case**.
+- Test cases are entirely self contained. They can be run in complete isolation or arbitrary sequence with other test cases.
+- Test cases consist of **test methods**. You can tell which methods are test methods because the names of test methods start with `test`.
+- Most test cases subclass `unittest.TestCase`, which implements assertion methods that allow you to check many different kinds of assertions for code correctness. Examples of such methods include: `self.assertEqual()`, `self.assertTrue()`, and `self.assertFalse()`.
+- If you define the `setUp()` and `tearDown()` methods, they are automatically executed before and after each test method in a test case. This promotes code reuse.
+- A test case should be entirely self-contained; they can be run in isolation or arbitrary sequence.
+- You can only enable one test framework at a time. Writing tests with one framework would be a good idea anyway for consistency.
+
+#### The `site` Module
+
+In order to test your code, you need to be able to import the modules that contain your code. This may require you to tinker with `sys.path`, which is a list of strings telling Python where to look for modules. Modifying this variable is done through the `site` module.
+
+Before we dive into the usage of the `site` module, we need to know a few things about the `sys` module.
+
+- `sys.executable`: The absolute path of the Python interpreter.
+- `sys.prefix`: The site-specific directory where the platform independent Python files are installed. What this means is the main collectino of Python library modules will be installed at `prefix/lib/pythonX.Y`.
+- `sys.exec_prefix`: ...
+
+> It looks like the solution was to add the project directory to the PYTHONPATH environment variable. This causes the project directory to get added to `sys.path` and makes the modules defined in it importable.
+
 
 ### C
 
