@@ -18,10 +18,19 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 - ⌃⌘G: View: Show SCM
 - ⇧⌘D: View: Show Run and Debug
 - ⇧⌘X: View: Show Extensions
+- ⌘1, ⌘2, ...: View: Focus First, Second, ... Editor Group
+- ⌃1, ⌃2, ...: View: Focus on First, second, ... Editor in Group
 - ⌘K⌘S: Preferences: Open Keyboard Shortcuts
 - ⌘P: Go To File ...
 - ⇧⌘O: Go To Symbol in Editor ...
 - ⌘T: Go To Symbol in Workspace ...
+
+### Selection
+
+- ⌥⌘↑: Add Cursor Above
+- ⌥⌘↓: Add Cursor Below
+- ⌘D: Add Next Occurrence (after selecting text, ⌘D will find the next occurrence of the selected text and add a cursor at that occurrence). 
+- ⇧⌘L: Select All Occurrences
 
 ### Debugging
 
@@ -81,3 +90,7 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 ### C++
 
 ### Rust
+
+## Implementation
+
+As seen [here](https://github.com/microsoft/vscode/tree/master/src), Visual Studio Code is built with the [Electron framework](https://www.electronjs.org/) primarily with JavaScript and TypeScript which means it's essentially a web application running locally on your machine.
