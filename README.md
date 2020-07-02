@@ -15,13 +15,18 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 - ⇧⌘P: Show All Commands
 - ⇧⌘E: View: Show Explorer
 - ⇧⌘F: View: Show Search
-- ⌃⌘G: View: Show SCM
+- ⇧⌘G: View: Show SCM (I have overridden this for consistency)
 - ⇧⌘D: View: Show Run and Debug
 - ⇧⌘X: View: Show Extensions
+- ⇧⌘T: View: Toggle Integrated Terminal
+- ⇧⌘←: View: Open Previous Editor
+- ⇧⌘→: View: Open Next Editor
 - ⌘K⌘S: Preferences: Open Keyboard Shortcuts
 - ⌘P: Go To File ...
 - ⇧⌘O: Go To Symbol in Editor ...
 - ⌘T: Go To Symbol in Workspace ...
+- ⌥-: Go Back
+- ⌥⇧-: Go Forward
 
 ### Debugging
 
@@ -90,6 +95,44 @@ The Python extension allows you to both run tests written with the `unittest`, `
 - A test case should be entirely self-contained; they can be run in isolation or arbitrary sequence.
 - You can only enable one test framework at a time. Writing tests with one framework would be a good idea anyway for consistency.
 
+Something you can do to write more realistic tests is create **mock objects**. These are artificially created objects that are designed to imitate real ones. Their value is in the fact that mock objects offer further control and stability of your tests. Instead of making an actual HTTP request and retrieving an HTTP response object in your code, you can create a fake HTTP response object instead. You can also create mock HTTP response objects that correspond to different failure modes!
+
+- Mock objects create attributes on the fly as you try to access them. This is the ultimate form of duck typing—mock objects can be used anywhere!
+- Mock objects keep track of how you use them.
+- A fantastic package for mocking tests that depend on the date is `freezegun`. Check it out!
+
+```
+from unittest import mock
+
+# create a mock object
+thing = mock.Mock()
+
+# perform assertions I
+thing.method.assert_not_called()
+
+# use the mock object
+thing.method("Kevin")
+
+# perform assertions II
+thing.method.assert_called()
+thing.method.assert_called_once()
+thing.method.assert_called_with("Kevin")        # only applies to most recent call
+thing.method.assert_called_once_with("Kevin")   # only applies to most recent call
+
+# use the mock object some more
+thing.method("Kelly")
+
+# perform assertions III
+thing.method.assert_called_once()
+thing.method.assert_called_with()
+
+# perform more analysis
+thing.method_calls
+thing.method.call_count
+thing.method.call_args      # only applies to most recent call
+thing.method.call_args_list
+```
+
 #### The `site` Module
 
 In order to test your code, you need to be able to import the modules that contain your code. This may require you to tinker with `sys.path`, which is a list of strings telling Python where to look for modules. Modifying this variable is done through the `site` module.
@@ -108,3 +151,9 @@ Before we dive into the usage of the `site` module, we need to know a few things
 ### C++
 
 ### Rust
+
+## TODO
+
+This is a list of unresolved questions.
+
+- When you install a new module with pip, VSCode Intellisense does not seem to pick it up until you quit the application and restart (there is an "Analyzing in Background" notification in the status line). Is there a way to automatically or manually trigger this to happen without restarting the application?
