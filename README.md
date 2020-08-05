@@ -80,6 +80,7 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 - A **linter** is a program that detects both stylistic as well as syntactic errors.
     - The default linter for Python in Visual Studio Code is PyLint, but you can choose a variety of other linters including Bandit, Flake8, and MyPy.
     - By default, linting is enabled (the `python.linting.enabled` setting is `true`), linting is triggered on saving a file (the `python.lintOnSave` setting is `true`), and the maximum number of linting messages is 100 (the `python.linting.maxNumberOfProblems` setting is `100`).
+    - Different linters will be able to catch different kinds of errors. Because of this, it may be advantageous to enable more than one linter. This is not only possible but also easy to do. The only catch is that this is not something you can do from the command palette. You must manually change some settings in `.vscode/settings.json`. For instance, if you wanted to enable both PyLint and MyPy, then you would set both `python.linting.mypyEnabled` and `python.linting.pylintEnabled` to be true.
 - A **formatter** is a program that only changes how your program looks.
     - The default linter for Python in Visual Studio Code is Autopep8, but you can choose other linters like Black or Yapf.
 
@@ -140,7 +141,7 @@ In order to test your code, you need to be able to import the modules that conta
 Before we dive into the usage of the `site` module, we need to know a few things about the `sys` module.
 
 - `sys.executable`: The absolute path of the Python interpreter.
-- `sys.prefix`: The site-specific directory where the platform independent Python files are installed. What this means is the main collectino of Python library modules will be installed at `prefix/lib/pythonX.Y`.
+- `sys.prefix`: The site-specific directory where the platform independent Python files are installed. What this means is the main collection of Python library modules will be installed at `prefix/lib/pythonX.Y`.
 - `sys.exec_prefix`: ...
 
 > It looks like the solution was to add the project directory to the PYTHONPATH environment variable. This causes the project directory to get added to `sys.path` and makes the modules defined in it importable.
@@ -157,3 +158,4 @@ Before we dive into the usage of the `site` module, we need to know a few things
 This is a list of unresolved questions.
 
 - When you install a new module with pip, VSCode Intellisense does not seem to pick it up until you quit the application and restart (there is an "Analyzing in Background" notification in the status line). Is there a way to automatically or manually trigger this to happen without restarting the application?
+- Linting is a super important past of a pleasing development environment so it deserves some more careful exposition. There are a lot of other Python linters that have not been discussed. For instance, `pycodestyle` and `pydocstyle`. What do these things have to offer? What are some other important linting-related settings that can be configured in `.vscode/settings.json`? What should be the default configuration for my personal linting purposes? Which linters should be installed and enabled?
