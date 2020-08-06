@@ -18,9 +18,9 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 - ⇧⌘G: View: Show SCM (I have overridden this for consistency)
 - ⇧⌘D: View: Show Run and Debug
 - ⇧⌘X: View: Show Extensions
-- ⇧⌘T: View: Toggle Integrated Terminal
-- ⇧⌘←: View: Open Previous Editor
-- ⇧⌘→: View: Open Next Editor
+- ⇧⌘T: View: Toggle Integrated Terminal (I have overridden this for consistency)
+- ⌥⌘←: View: Open Previous Editor
+- ⌥⌘→: View: Open Next Editor
 - ⌘K⌘S: Preferences: Open Keyboard Shortcuts
 - ⌘P: Go To File ...
 - ⇧⌘O: Go To Symbol in Editor ...
@@ -30,11 +30,11 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 
 ### Debugging
 
-- There are 6 things you can do: Continue, Step Over, Step Into, Step Out, Restart, and Stop.
+- There are **6** things you can do: Continue, Step Over, Step Into, Step Out, Restart, and Stop.
 - There is a Debug Console available in the Panel (where the Integrated Terminal is also found) that allows you to evaluate expressions where your program currently is in execution.
-- Visual Studio Code supports Log Points which are an alternative to print statements that show up in the Debug Console instead of the Terminal. The advantage of this is that it does not require making modifications to your code (which you have to remember to revert) and it decouples your debugging messages from your regular program output.
-- Instead of always logging something when you reach a particular point in your program, you can hav conditional Log Points based on expression evaluation of hit count. These can be dynamically modified during a debugging session.
-- Both Break Points and Log Points in Visual Studio Code persist even after you restart the application.
+- Visual Studio Code supports *Log Points* which are an alternative to print statements that show up in the Debug Console instead of the Terminal. The advantage of this is that it does not require making modifications to your code (which you have to remember to revert) and it decouples your debugging messages from your regular program output.
+- Instead of always logging something when you reach a particular point in your program, you can have conditional *Log Points* based on expression evaluation of hit count. These can be dynamically modified during a debugging session.
+- Both *Break Points* and *Log Points* in Visual Studio Code persist even after you restart the application.
 
 ### Commands
 
@@ -55,10 +55,11 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 ## Configuration
 
-- Visual Studio Code uses JSON for all configuration purposes.
+- Visual Studio Code uses JSON files for all configuration purposes.
 - There are two main categories of settings: User and Workspace.
+    - User settings are stored in the file `~/Library/ApplicationSupport/Code/User/settings.json`
+    - Workspace settings are stored in the file `.vscode/settings.json`.
 - Use the keyboard shortcut ⌘, to access both User and Workspace settings.
-- Workplace settings are stored in the file `.vscode/settings.json`.
 - Debug settings are stored in the file `.vscode/launch.json`.
 
 ## Navigation
@@ -72,7 +73,7 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 - IntelliSense works for standard modules as well as ones you've installed into the environment of the selected Python interpreter; just make sure that you've selected the correct Python interepreter for your workspace.
 - Here are some commands the Python extension added to the command palette:
-    - Python: Select Interpreter
+    - Python: Select Interpreter (usually a good choice is `.venv/bin/python`)
     - Python: Start REPL
     - Python: Run Python File in Terminal
     - Python: Select Linter
@@ -80,12 +81,38 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
     - Python: Configure Tests
     - Python: Run All Tests
     - Python Refactor: Sort Imports
-- A **linter** is a program that detects both stylistic as well as syntactic errors.
-    - The default linter for Python in Visual Studio Code is PyLint, but you can choose a variety of other linters including Bandit, Flake8, and MyPy.
-    - By default, linting is enabled (the `python.linting.enabled` setting is `true`), linting is triggered on saving a file (the `python.lintOnSave` setting is `true`), and the maximum number of linting messages is 100 (the `python.linting.maxNumberOfProblems` setting is `100`).
-    - Different linters will be able to catch different kinds of errors. Because of this, it may be advantageous to enable more than one linter. This is not only possible but also easy to do. The only catch is that this is not something you can do from the command palette. You must manually change some settings in `.vscode/settings.json`. For instance, if you wanted to enable both PyLint and MyPy, then you would set both `python.linting.mypyEnabled` and `python.linting.pylintEnabled` to be true.
-- A **formatter** is a program that only changes how your program looks.
-    - The default linter for Python in Visual Studio Code is Autopep8, but you can choose other linters like Black or Yapf.
+
+#### Formatting
+
+A **formatter** is a program that detects only stylistic errors. Here are the most popular formatters:
+
+- autopep8 (default)
+- black
+- yapf
+
+Here are the most important formatting commands:
+
+- Format Document With...
+- Format Document
+- Format Selection
+
+Here are the most important formatting settings:
+
+- `python.formatting.provider`: which formatter you are using (the possible values are `"autopep8"`, `"black"`, or `"yapf"`, or `"none"`).
+- ``
+
+
+#### Linting
+
+A **linter** is a program that detects both stylistic and syntactic errors.
+
+- The default linter for Python in Visual Studio Code is PyLint, but you can choose a variety of other linters including Bandit, Flake8, and MyPy.
+- By default, linting is enabled (the `python.linting.enabled` setting is `true`), linting is triggered on saving a file (the `python.lintOnSave` setting is `true`), and the maximum number of linting messages is 100 (the `python.linting.maxNumberOfProblems` setting is `100`).
+- Different linters will be able to catch different kinds of errors. Because of this, it may be advantageous to enable more than one linter. This is not only possible but also easy to do. The only catch is that this is not something you can do from the command palette. You must manually change some settings in `.vscode/settings.json`. For instance, if you wanted to enable both PyLint and MyPy, then you would set both `python.linting.mypyEnabled` and `python.linting.pylintEnabled` to be true.
+
+```
+dfasdf
+```
 
 #### Testing
 
@@ -149,6 +176,13 @@ Before we dive into the usage of the `site` module, we need to know a few things
 
 > It looks like the solution was to add the project directory to the PYTHONPATH environment variable. This causes the project directory to get added to `sys.path` and makes the modules defined in it importable.
 
+#### Language Servers
+
+If you open the settings, you can choose the Python language server to use. Your two options are *Jedi* and *Microsoft*. Here are some considerations to take into account when making the decision of which language server you are going to use:
+
+- One
+- Two
+- Three
 
 ### C
 
