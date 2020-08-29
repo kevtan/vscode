@@ -15,5 +15,6 @@
     "python.testing.unittestEnabled": true,
     "python.testing.pytestArgs": [
         "tests"
-    ]
+    ],
+    "python.pythonPath": ".venv/bin/python"
 }
