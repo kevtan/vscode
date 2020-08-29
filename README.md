@@ -12,6 +12,8 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 
 ### Shortcuts
 
+Note that on Linux distributions, the `Ctrl` key is used instead of the `Cmd` key for macOS.
+
 - ⇧⌘P: Show All Commands
 - ⇧⌘E: View: Show Explorer
 - ⇧⌘F: View: Show Search
