@@ -107,7 +107,7 @@ Something you can do to write more realistic tests is create **mock objects**. T
 - Mock objects keep track of how you use them.
 - A fantastic package for mocking tests that depend on the date is `freezegun`. Check it out!
 
-```
+```python
 from unittest import mock
 
 # create a mock object
