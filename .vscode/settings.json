@@ -16,5 +16,8 @@
     "python.testing.pytestArgs": [
         "tests"
     ],
-    "python.pythonPath": ".venv/bin/python"
+    "python.pythonPath": ".venv/bin/python",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
