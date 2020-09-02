@@ -62,6 +62,7 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 - Use the keyboard shortcut ⌘, to access both User and Workspace settings.
 - Workplace settings are stored in the file `.vscode/settings.json`.
 - Debug settings are stored in the file `.vscode/launch.json`.
+- For more information about the different kinds of variables that are available to configure Visual Studio Code, see https://code.visualstudio.com/docs/editor/variables-reference.
 
 ## Navigation
 
