@@ -6,7 +6,6 @@ import numpy as np
 
 
 class MyTestCase(unittest.TestCase):
-
     @unittest.skip("demonstrating skipping")
     def test_nothing(self):
         self.fail("shouldn't happen")
@@ -23,8 +22,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_maybe_skipped(self):
         if random.random() > 0.5:
-            raise self.skipTest("external resource not available")
-        pass
+            self.skipTest("external resource not available")
 
 
 @unittest.skip("demonstrate test case skipping")
