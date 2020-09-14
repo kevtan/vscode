@@ -101,18 +101,32 @@ Here are the most important formatting settings:
 - `python.formatting.provider`: which formatter you are using (the possible values are `"autopep8"`, `"black"`, or `"yapf"`, or `"none"`).
 - ``
 
-
 #### Linting
 
-A **linter** is a program that detects both stylistic and syntactic errors.
+A **linter** is a program that detects both stylistic and syntactic errors. Here are the different linters that you can choose when working with Python in Visual Studio Code:
 
-- The default linter for Python in Visual Studio Code is PyLint, but you can choose a variety of other linters including Bandit, Flake8, and MyPy.
+- bandit
+- flake8
+- mypy
+- prospector
+- pycodestyle
+- pydocstyle
+- pylama
+- pylint (default)
+
+Linting commands:
+
+- Python: Enable Linting (This command allows you to quickly toggle the `python.linting.enabled` setting between `true` and `false`. If the setting did not exist before, then it is added to `settings.json`.)
+- Python: Select Linter (This command sets the `python.linting.<linter>Enabled` setting to be `true` for whatever linter you select and simultaneously sets the corresponding setting for all the other linters to be `false`. The only way you can enable multiple linters is for you to manually edit the `settings.json` file.)
+- Python: Run Linting (This command forcibly triggers the linter to run. You shouldn't really need to use it though, because linting is automatically run every time you hit save.)
+
+Linting settings:
+
 - By default, linting is enabled (the `python.linting.enabled` setting is `true`), linting is triggered on saving a file (the `python.lintOnSave` setting is `true`), and the maximum number of linting messages is 100 (the `python.linting.maxNumberOfProblems` setting is `100`).
 - Different linters will be able to catch different kinds of errors. Because of this, it may be advantageous to enable more than one linter. This is not only possible but also easy to do. The only catch is that this is not something you can do from the command palette. You must manually change some settings in `.vscode/settings.json`. For instance, if you wanted to enable both PyLint and MyPy, then you would set both `python.linting.mypyEnabled` and `python.linting.pylintEnabled` to be true.
 
-```
-dfasdf
-```
+PyRight: https://github.com/Microsoft/pyright
+PyLance: https://devblogs.microsoft.com/python/announcing-pylance-fast-feature-rich-language-support-for-python-in-visual-studio-code/
 
 #### Testing
 

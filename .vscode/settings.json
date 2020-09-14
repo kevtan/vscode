@@ -15,5 +15,12 @@
     "python.testing.unittestEnabled": true,
     "python.testing.pytestArgs": [
         "tests"
+    ],
+    "cSpell.words": [
+        "mypy",
+        "pycodestyle",
+        "pydocstyle",
+        "pylama",
+        "pylint"
     ]
 }
