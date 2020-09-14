@@ -32,9 +32,9 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 
 - There are **6** things you can do: Continue, Step Over, Step Into, Step Out, Restart, and Stop.
 - There is a Debug Console available in the Panel (where the Integrated Terminal is also found) that allows you to evaluate expressions where your program currently is in execution.
-- Visual Studio Code supports *Log Points* which are an alternative to print statements that show up in the Debug Console instead of the Terminal. The advantage of this is that it does not require making modifications to your code (which you have to remember to revert) and it decouples your debugging messages from your regular program output.
-- Instead of always logging something when you reach a particular point in your program, you can have conditional *Log Points* based on expression evaluation of hit count. These can be dynamically modified during a debugging session.
-- Both *Break Points* and *Log Points* in Visual Studio Code persist even after you restart the application.
+- Visual Studio Code supports _Log Points_ which are an alternative to print statements that show up in the Debug Console instead of the Terminal. The advantage of this is that it does not require making modifications to your code (which you have to remember to revert) and it decouples your debugging messages from your regular program output.
+- Instead of always logging something when you reach a particular point in your program, you can have conditional _Log Points_ based on expression evaluation of hit count. These can be dynamically modified during a debugging session.
+- Both _Break Points_ and _Log Points_ in Visual Studio Code persist even after you restart the application.
 
 ### Commands
 
@@ -178,7 +178,7 @@ Before we dive into the usage of the `site` module, we need to know a few things
 
 #### Language Servers
 
-If you open the settings, you can choose the Python language server to use. Your two options are *Jedi* and *Microsoft*. Here are some considerations to take into account when making the decision of which language server you are going to use:
+If you open the settings, you can choose the Python language server to use. Your two options are _Jedi_ and _Microsoft_. Here are some considerations to take into account when making the decision of which language server you are going to use:
 
 - One
 - Two
