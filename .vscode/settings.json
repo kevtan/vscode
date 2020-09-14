@@ -17,10 +17,12 @@
         "tests"
     ],
     "cSpell.words": [
+        "autopep",
         "mypy",
         "pycodestyle",
         "pydocstyle",
         "pylama",
-        "pylint"
+        "pylint",
+        "yapf"
     ]
 }

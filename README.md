@@ -84,22 +84,23 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 #### Formatting
 
-A **formatter** is a program that detects only stylistic errors. Here are the most popular formatters:
+A **formatter** is a program that detects only stylistic errors. Here are the different formatters that you can choose when working with Python in Visual Studio Code:
 
 - autopep8 (default)
 - black
 - yapf
 
-Here are the most important formatting commands:
+Formatting commands:
 
 - Format Document With...
 - Format Document
 - Format Selection
 
-Here are the most important formatting settings:
+Formatting settings:
 
 - `python.formatting.provider`: which formatter you are using (the possible values are `"autopep8"`, `"black"`, or `"yapf"`, or `"none"`).
-- ``
+
+TODO: Can you enable more than one formatter? What are the repercussions of doing so?
 
 #### Linting
 
