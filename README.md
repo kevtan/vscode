@@ -72,6 +72,13 @@ This section encompasses both navigation of your codebase and the Visual Studio 
 - Go to Definition (⌥F): Jump to the definition of a symbol.
 - Go to Declaration:
 
+The following commands do not require a language server but are still extremely useful for navigating around your code.
+
+- ⌘↑: cursorTop
+- ⇧⌘↑: cursorTopSelect
+- ⌘↓: cursorBottom
+- ⇧⌘↓: cursorBottomSelect
+
 There are a total of 5 distinct sections of the Visual Studio Code IDE UI. Some of the sections are always visible while others can be toggled between being visible and invisible. These sections are listed below. The names I've given them are not standard and loosely derived from the image [here](https://code.visualstudio.com/docs/getstarted/userinterface).
 
 1. Activity Bar
