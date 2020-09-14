@@ -57,8 +57,8 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 - Visual Studio Code uses JSON files for all configuration purposes.
 - There are two main categories of settings: User and Workspace.
-    - User settings are stored in the file `~/Library/ApplicationSupport/Code/User/settings.json`
-    - Workspace settings are stored in the file `.vscode/settings.json`.
+  - User settings are stored in the file `~/Library/ApplicationSupport/Code/User/settings.json`
+  - Workspace settings are stored in the file `.vscode/settings.json`.
 - Use the keyboard shortcut ⌘, to access both User and Workspace settings.
 - Debug settings are stored in the file `.vscode/launch.json`.
 
@@ -73,14 +73,14 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 - IntelliSense works for standard modules as well as ones you've installed into the environment of the selected Python interpreter; just make sure that you've selected the correct Python interpreter for your workspace.
 - Here are some commands the Python extension added to the command palette:
-    - Python: Select Interpreter (usually a good choice is `.venv/bin/python`)
-    - Python: Start REPL
-    - Python: Run Python File in Terminal
-    - Python: Select Linter
-    - Python: Format Document
-    - Python: Configure Tests
-    - Python: Run All Tests
-    - Python Refactor: Sort Imports
+  - Python: Select Interpreter (usually a good choice is `.venv/bin/python`)
+  - Python: Start REPL
+  - Python: Run Python File in Terminal
+  - Python: Select Linter
+  - Python: Format Document
+  - Python: Configure Tests
+  - Python: Run All Tests
+  - Python Refactor: Sort Imports
 
 #### Formatting
 
