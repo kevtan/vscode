@@ -6,7 +6,7 @@ When you start Visual Studio Code in a folder, that folder becomes your workspac
 
 ### IntelliSense
 
-IntelliSense refers to the broad category of features that Visual Studio Code provides to make code editing both easier and more effective for developers. An example of one such feature is smart completion suggestions. Instead of suggesting completions based on the strings that exist in the current file (which is how Vim's native completion suggestion system works), Intellisense suggests completions based on variable types and knowledge of the symbols defined in imported modulesa among other things. These kinds of suggestions are far more comprehensive and useful, which makes the development experience delightful.
+IntelliSense refers to the broad category of features that Visual Studio Code provides to make code editing both easier and more effective for developers. An example of one such feature is smart completion suggestions. Instead of suggesting completions based on the strings that exist in the current file (which is how Vim's native completion suggestion system works), Intellisense suggests completions based on variable types and knowledge of the symbols defined in imported modules among other things. These kinds of suggestions are far more comprehensive and useful, which makes the development experience delightful.
 
 IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, SCSS, and Less. One possible reason why IntelliSense is so tightly coupled with web technologies is because Visual Studio Code itself is built using web technologies. In particular, it is based on the Electron framework, which allows the development of desktop GUI applications using web technologies and is the basis of Atom, GitHub Desktop, and WordPress Desktop. You can get IntelliSense for other languages through Extensions.
 
@@ -71,7 +71,7 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 ### Python
 
-- IntelliSense works for standard modules as well as ones you've installed into the environment of the selected Python interpreter; just make sure that you've selected the correct Python interepreter for your workspace.
+- IntelliSense works for standard modules as well as ones you've installed into the environment of the selected Python interpreter; just make sure that you've selected the correct Python interpreter for your workspace.
 - Here are some commands the Python extension added to the command palette:
     - Python: Select Interpreter (usually a good choice is `.venv/bin/python`)
     - Python: Start REPL
