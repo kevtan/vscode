@@ -12,6 +12,8 @@ IntelliSense is natively supported for JavaScript, TypeScript, JSON, HTML, CSS, 
 
 ### Shortcuts
 
+Note that on Linux distributions, the `Ctrl` key is used instead of the `Cmd` key for macOS.
+
 - ⇧⌘P: Show All Commands
 - ⇧⌘E: View: Show Explorer
 - ⇧⌘F: View: Show Search
@@ -61,6 +63,7 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
   - Workspace settings are stored in the file `.vscode/settings.json`.
 - Use the keyboard shortcut ⌘, to access both User and Workspace settings.
 - Debug settings are stored in the file `.vscode/launch.json`.
+- For more information about the different kinds of variables that are available to configure Visual Studio Code, see https://code.visualstudio.com/docs/editor/variables-reference.
 
 ## Navigation
 
@@ -147,7 +150,7 @@ Something you can do to write more realistic tests is create **mock objects**. T
 - Mock objects keep track of how you use them.
 - A fantastic package for mocking tests that depend on the date is `freezegun`. Check it out!
 
-```
+```python
 from unittest import mock
 
 # create a mock object
@@ -204,6 +207,24 @@ If you open the settings, you can choose the Python language server to use. Your
 ### C++
 
 ### Rust
+
+## Extensions
+
+Visual Studio Code is a highly extensible integrated development environment. It features an extensions marketplace where you can find a variety of useful tools. In this section, I will point out a few extensions that I find extremely useful. These extensions are intuitive to use and are actively maintained.
+
+* Gitmoji: This extension allows you to add standardized and playful emojis to your commit messages. Some of the most useful ones that I use often include the following:
+    * 📝 Write docs.
+    * 💡 Add or update comments in source code.
+    * 🎨 Improve structure / format of the code.
+    * 🥚 Add or update an easter egg.
+    * 🥅 Catch errors.
+    * 🗑 Deprecated code that needs to be cleaned up.
+    * 🙈 Add or update a .gitignore file.
+    * 🏗 Make architectural changes.
+* Git Graph:
+* Monokai Pro:
+* Path Intellisense:
+* Docker:
 
 ## TODO
 

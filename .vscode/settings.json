@@ -2,7 +2,6 @@
     "editor.fontLigatures": true,
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.mypyEnabled": false,
     "python.testing.unittestArgs": [
         "-v",
         "-s",
@@ -25,4 +24,10 @@
         "pylint",
         "yapf"
     ]
+    ],
+    "python.pythonPath": ".venv/bin/python",
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "python.formatting.provider": "black"
 }
