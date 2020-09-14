@@ -67,8 +67,23 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 
 ## Navigation
 
+This section encompasses both navigation of your codebase and the Visual Studio Code IDE. First, we discuss some ways you can use to effectively navigate your codebase. Note that these are features that a _language server_ will provide; if you either don't have a language server running or the programming language you're using doesn't have a supported language server, these features will not be available to you.
+
 - Go to Definition (⌥F): Jump to the definition of a symbol.
 - Go to Declaration:
+
+There are a total of 5 distinct sections of the Visual Studio Code IDE UI. Some of the sections are always visible while others can be toggled between being visible and invisible. These sections are listed below. The names I've given them are not standard and loosely derived from the image [here](https://code.visualstudio.com/docs/getstarted/userinterface).
+
+1. Activity Bar
+2. Extended Activity Bar
+3. Editor Groups
+4. Panel
+5. Status Bar
+
+The following two commands allow you to move through these sections like a breeze.
+
+- View: Focus Next Part (F6) - Cycle through the sections clockwise.
+- View: Focus Preview Part (⇧F6) - Cycle through the sections counterclockwise.
 
 ## Languages
 
