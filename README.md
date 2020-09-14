@@ -212,19 +212,18 @@ If you open the settings, you can choose the Python language server to use. Your
 
 Visual Studio Code is a highly extensible integrated development environment. It features an extensions marketplace where you can find a variety of useful tools. In this section, I will point out a few extensions that I find extremely useful. These extensions are intuitive to use and are actively maintained.
 
-* Gitmoji: This extension allows you to add standardized and playful emojis to your commit messages. Some of the most useful ones that I use often include the following:
-    * 📝 Write docs.
-    * 💡 Add or update comments in source code.
-    * 🎨 Improve structure / format of the code.
-    * 🥚 Add or update an easter egg.
-    * 🥅 Catch errors.
-    * 🗑 Deprecated code that needs to be cleaned up.
-    * 🙈 Add or update a .gitignore file.
-    * 🏗 Make architectural changes.
-* Git Graph:
-* Monokai Pro:
-* Path Intellisense:
-* Docker:
+- Gitmoji: This extension allows you to add standardized and playful emojis to your commit messages. Some of the most useful ones that I use often include the following:
+  - 📝 Write docs.
+  - 💡 Add or update comments in source code.
+  - 🎨 Improve structure / format of the code.
+  - 🥚 Add or update an easter egg.
+  - 🥅 Catch errors.
+  - 🗑 Deprecated code that needs to be cleaned up.
+  - 🙈 Add or update a .gitignore file.
+  - 🏗 Make architectural changes.
+- Git Graph:
+- Path Intellisense:
+- Docker:
 
 ## TODO
 
