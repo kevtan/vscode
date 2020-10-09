@@ -92,6 +92,13 @@ The following two commands allow you to move through these sections like a breez
 - View: Focus Next Part (F6) - Cycle through the sections clockwise.
 - View: Focus Preview Part (⇧F6) - Cycle through the sections counterclockwise.
 
+There is actually a way to get some of Vim's keyboard navigation functionality in the default Visual Studio Code without the Vim extension!
+
+- Ctrl-n: move down
+- Ctrl-p: move up
+- Ctrl-b: move left
+- Ctrl-f: move right
+
 ## Languages
 
 ### Python
