@@ -42,18 +42,23 @@ Note that on Linux distributions, the `Ctrl` key is used instead of the `Cmd` ke
 
 To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examples:
 
+- Collapse Folders in Explorer
+- Refresh Explorer
 - Git: Stash
 - Git: Commit
 - File: New File
 - File: New Folder
 - View: Toggle Minimap
 - View: Toggle Wordwrap
+- View: Close All Editors
 - Debug: Open launch.json
 - Debug: Start Debugging
 - Markdown: Open Preview
 - Markdown: Open Preview to the Side
+- Preferences: Color Theme
 - Preferences: Open Workspace Settings
 - Preferences: Open Workspace Settings (JSON)
+- Terminal: Clear
 
 ## Configuration
 
