@@ -59,6 +59,8 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 - Preferences: Open Workspace Settings
 - Preferences: Open Workspace Settings (JSON)
 - Terminal: Clear
+- Shell Command: Install 'code' command in PATH
+- Shell Command: Uninstall 'code' command in PATH
 
 ## Configuration
 
