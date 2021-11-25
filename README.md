@@ -72,6 +72,67 @@ To show all the commands, use the keyboard shortcut ⇧⌘P. Here are some examp
 - Debug settings are stored in the file `.vscode/launch.json`.
 - For more information about the different kinds of variables that are available to configure Visual Studio Code, see https://code.visualstudio.com/docs/editor/variables-reference.
 
+### `tasks.json`
+
+If you create a `.vscode/tasks.json` file, then you can create your own tasks to run from within the Visual Studio Code IDE.
+
+#### Task Properties and Values
+
+Tasks in the Visual Studio Code IDE are nothing more than JavaScript objects. This being the case, they consist of properties and their associated values. This section describes some of the most important task properties I've come across and descriptions of their associated values.
+
+##### `label`
+
+The `label` property allows you to give your task a name.
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Autoformat Code"
+    },
+    {
+      "label": "Compile Code (Debug)"
+    },
+    {
+      "label": "Compile Code (Release)"
+    }
+  ]
+}
+```
+
+##### `group`
+
+The `group` property allows you to mark a task as either a `build` or `test` task. The advantage to marking tasks as either `build` or `test` tasks is that the task is then available when you execute the "Tasks: Run Build Task" and "Tasks: Run Test Task" commands. These two tasks are simply just filtered versions of the more general "Tasks: Run Task" command (which will display all of the tasks regardless of whether or not they have the `group` property and the value of the `group` property for tasks that have it).
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Code (Debug)",
+      "group": "build"
+    },
+    {
+      "label": "Compile Code (Release)",
+      "group": "build"
+    },
+    {
+      "label": "Run Lab 0 Test Harness",
+      "group": "test"
+    },
+    {
+      "label": "Run Lab 1 Test Harness",
+      "group": "test"
+    },
+    {
+      "label": "Run Lab 2 Test Harness",
+      "group": "test"
+    }
+  ]
+}
+```
+
 ## Navigation
 
 This section encompasses both navigation of your codebase and the Visual Studio Code IDE. First, we discuss some ways you can use to effectively navigate your codebase. Note that these are features that a _language server_ will provide; if you either don't have a language server running or the programming language you're using doesn't have a supported language server, these features will not be available to you.
