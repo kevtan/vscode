@@ -299,9 +299,17 @@ If you open the settings, you can choose the Python language server to use. Your
 - Two
 - Three
 
-### C
+### C/C++
 
-### C++
+#### The `C_Cpp.default.defines` Setting
+
+It's possible to define a preprocessor macro without specifying a value (in which case the default value will be 1).
+
+<img width="444" alt="Screenshot 2022-07-11 at 11 08 45 AM" src="https://user-images.githubusercontent.com/33914892/178329640-8eac563d-6fa5-428d-a0d4-66dbd5eaaf42.png">
+
+Howevever, it's also possible to define a preprocessor macro while specifying a value.
+
+<img width="443" alt="Screenshot 2022-07-11 at 11 09 12 AM" src="https://user-images.githubusercontent.com/33914892/178329715-8fcac5e2-74dd-4672-84c5-a02a0c0efcf8.png">
 
 ### Rust
 
